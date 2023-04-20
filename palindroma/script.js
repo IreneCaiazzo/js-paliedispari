@@ -3,24 +3,30 @@
 // Creare una funzione per capire se la parola inserita è palindroma
 
 //chiedo a user una parola
-const word = prompt('scrivi una parola');
-console.log(word);
+const text = prompt('scrivi una parola');
+console.log(text);
+palindrome (text);
 
-//creare la reverse word
+function palindrome (word){
+    
+    //creare la reverse word
+    const arrWord = word.split("");
+    console.log(arrWord);
 
-const arrWord = word.split("");
-console.log(arrWord);
+    const arrRevWord = arrWord.reverse();
+    console.log(arrRevWord);
 
-const arrRevWord = arrWord.reverse();
-console.log(arrRevWord);
+    const revWord = arrRevWord.join('');
+    console.log(revWord);
 
-const revWord = arrRevWord.join('');
-console.log(revWord);
 
-//confrontare word e reversew
+    //confrontare word e reversew
 
-if (revWord === word){
-    console.log('palindromo');
-}else{
-    console.log('nope');
+    if (revWord === word){
+        console.log('palindromo');
+    }else{
+        console.log('nope');
+    }
+
 }
+
