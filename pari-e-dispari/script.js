@@ -23,14 +23,14 @@ let compRandom = Math.floor(Math.random() * (5) ) + 1;
 console.log('il numero del computer è: ' + compRandom);
 
 // somma dei due numeri
-function sommaNumeri (){
+function sommaNumeri (a, b){
     
-    const sum = numUser + compRandom;
+    const sum = a + b;
     return sum;
 
 }
 
-const somma = sommaNumeri();
+const somma = sommaNumeri(numUser, compRandom);
 
 console.log('la loro somma è: ' + somma);
 
@@ -38,9 +38,9 @@ console.log('la loro somma è: ' + somma);
 
 const usersBet = document.querySelector('#pod').value;
 
-function parODis(){
+function parODis(somma){
 
-    if (somma %2 == 0){
+    if (somma % 2 == 0){
         console.log ('pari');
     } 
     else {
@@ -52,7 +52,7 @@ function parODis(){
 btn.addEventListener('click',
     function (){
         const usersBet = document.querySelector('#pod').value;
-        if (parODis === usersBet.pod){
+        if (parODis(somma) === usersBet.value){
             console.log('hai vinto');
         }
         else{
